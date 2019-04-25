@@ -1,13 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Time Railz Train Scheduler - know when to go</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Added Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
 </head>
+
 <body>
-    <h1>Time Railz Train Scheduler</h1>
-    
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <h1 class="text-center">Time Railz Train Scheduler</h1>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                CURRENT TRAIN SCHEDULE
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+
+        <div class="card">
+            <div class="card-header">
+                ADD A TRAIN
+            </div>
+            <br>
+            <div class="container">
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault01">Train Name</label>
+                            <input type="text" class="form-control" id="validationDefault01" placeholder="Train Name"
+                                value="" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault02">Destination</label>
+                            <input type="text" class="form-control" id="validationDefault02" placeholder="Destination"
+                                value="" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">First Train Time</label>
+                            <input type="text" class="form-control" id="validationDefault03" placeholder="City"
+                                required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationDefault04">Frequency</label>
+                            <input type="text" class="form-control" id="validationDefault04" placeholder="Frequency"
+                                required>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">SUBMIT</button>
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
