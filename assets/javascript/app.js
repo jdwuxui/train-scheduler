@@ -1,13 +1,35 @@
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyD-KpSGyr4-NWrCLFUOMU_1osYBJ1McHTs",
-    authDomain: "time-railz-train-scheduler.firebaseapp.com",
-    databaseURL: "https://time-railz-train-scheduler.firebaseio.com",
-    projectId: "time-railz-train-scheduler",
-    storageBucket: "time-railz-train-scheduler.appspot.com",
-    messagingSenderId: "1098841836940"
-};
-firebase.initializeApp(config);
+// var config = {
+//     apiKey: "AIzaSyD-KpSGyr4-NWrCLFUOMU_1osYBJ1McHTs",
+//     authDomain: "time-railz-train-scheduler.firebaseapp.com",
+//     databaseURL: "https://time-railz-train-scheduler.firebaseio.com",
+//     projectId: "time-railz-train-scheduler",
+//     storageBucket: "time-railz-train-scheduler.appspot.com",
+//     messagingSenderId: "1098841836940"
+// };
+// firebase.initializeApp(config);
+
+// Capture submit button click
+$("#submit").on("click", function (event) {
+    // prevent form submit
+    event.preventDefault();
+    // Capture User Inputs and store them into variables
+    var trainName = $("#train-name-text").val().trim();
+    var destination = $("#destination-text").val().trim();
+    var firstTrainTime = $("#first-time-text").val().trim();
+    var frequency = $("#frequency-text").val().trim();
+
+    // Confirm vars received
+    // console.log(trainName);
+    // console.log(destination);
+    // console.log(firstTrainTime);
+    // console.log(frequency);
+
+    // Output data into table
+});
+
+    
+
 
 // Assume the following situations.
 
@@ -42,32 +64,32 @@ firebase.initializeApp(config);
 // 7 - 2 = 5 minutes away
 // 5 + 3:16 = 3:21
 
-// Assumptions
-var tFrequency = 3;
+// // Assumptions
+// var tFrequency = 3;
 
-// Time is 3:30 AM
-var firstTime = "03:30";
+// // Time is 3:30 AM
+// var firstTime = "03:30";
 
-// First Time (pushed back 1 year to make sure it comes before current time)
-var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
-console.log(firstTimeConverted);
+// // First Time (pushed back 1 year to make sure it comes before current time)
+// var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+// console.log(firstTimeConverted);
 
-// Current Time
-var currentTime = moment();
-console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+// // Current Time
+// var currentTime = moment();
+// console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
-// Difference between the times
-var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-console.log("DIFFERENCE IN TIME: " + diffTime);
+// // Difference between the times
+// var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+// console.log("DIFFERENCE IN TIME: " + diffTime);
 
-// Time apart (remainder)
-var tRemainder = diffTime % tFrequency;
-console.log(tRemainder);
+// // Time apart (remainder)
+// var tRemainder = diffTime % tFrequency;
+// console.log(tRemainder);
 
-// Minute Until Train
-var tMinutesTillTrain = tFrequency - tRemainder;
-console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+// // Minute Until Train
+// var tMinutesTillTrain = tFrequency - tRemainder;
+// console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
-// Next Train
-var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+// // Next Train
+// var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+// console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
