@@ -34,77 +34,70 @@
                     <h5 class="text-center" id="heroSub">We keep life on track.</h5>
                 </div>
             </div>
-
         </div>
-        <div class="card">
-            <div class="card-header">
-                CURRENT TRAIN SCHEDULE
-            </div>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">TRAIN NAME</th>
-                        <th scope="col">DESTINATION</th>
-                        <th scope="col">FREQUENCY (MIN)</th>
-                        <th scope="col">NEXT ARRIVAL</th>
-                        <th scope="col">MINUTES AWAY</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                    </tr>
-                    <tr>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                        <td>sample data</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        CURRENT TRAIN SCHEDULE
+                    </div>
+                    <table class="table table-hover" id="train-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">TRAIN NAME</th>
+                                <th scope="col">DESTINATION</th>
+                                <th scope="col">FREQUENCY (MIN)</th>
+                                <th scope="col">NEXT ARRIVAL</th>
+                                <th scope="col">MINUTES AWAY</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <br>
 
-        <div class="card">
-            <div class="card-header">
-                ADD A TRAIN
-            </div>
-            <br>
-            <div class="container">
-                <form>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="train-name-text">Train Name</label>
-                            <input type="text" class="form-control" id="train-name-text" placeholder="Train Name"
-                                value="" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="destination-text">Destination</label>
-                            <input type="text" class="form-control" id="destination-text" placeholder="Destination"
-                                value="" required>
-                        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        ADD A TRAIN
                     </div>
-                    <div class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="first-time-text">First Train Time</label>
-                            <input type="text" class="form-control" id="first-time-text" placeholder="First Train Time"
-                                required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="frequency-text">Frequency</label>
-                            <input type="text" class="form-control" id="frequency-text" placeholder="Frequency"
-                                required>
-                        </div>
+                    <br>
+                    <div class="container">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="train-name-text">Train Name</label>
+                                    <input type="text" class="form-control" id="train-name-input"
+                                        placeholder="Train Name" value="" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="destination-text">Destination</label>
+                                    <input type="text" class="form-control" id="destination-input"
+                                        placeholder="Type a city" value="" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="first-time-text">First Train Time (00:00)</label>
+                                    <input type="text" class="form-control" id="first-time-input"
+                                        placeholder="00:00" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="frequency-text">Frequency (Min)</label>
+                                    <input type="text" class="form-control" id="frequency-input" placeholder="0"
+                                        required>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="add-train" type="submit">SUBMIT</button>
+                        </form>
+                        <br>
                     </div>
-                    <button class="btn btn-primary" id="submit" type="submit">SUBMIT</button>
-                </form>
-                <br>
+                </div>
             </div>
         </div>
     </div>

@@ -9,15 +9,16 @@
 // };
 // firebase.initializeApp(config);
 
+
 // Capture submit button click
-$("#submit").on("click", function (event) {
+$("#add-train").on("click", function (event) {
     // prevent form submit
     event.preventDefault();
     // Capture User Inputs and store them into variables
-    var trainName = $("#train-name-text").val().trim();
-    var destination = $("#destination-text").val().trim();
-    var firstTrainTime = $("#first-time-text").val().trim();
-    var frequency = $("#frequency-text").val().trim();
+    var trainName = $("#train-name-input").val().trim();
+    var destination = $("#destination-input").val().trim();
+    var firstTrainTime = $("#first-time-input").val().trim();
+    var frequency = $("#frequency-input").val().trim();
 
     // Confirm vars received
     // console.log(trainName);

@@ -9,12 +9,28 @@ body {
     color: #ffffff;
 }
 
-h1 {
+h1,
+.btn-primary,
+th {
     font-family: 'Gugi', cursive;
+}
+
+h1 {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.400);
+}
+
+th,
+.btn-primary {
+    font-size: 12px;
 }
 
 #heroSub {
     background-color: #00000080;
     padding: .5rem 2rem .5rem 2rem;
+}
+
+.btn-primary {
+    color: rgb(27, 27, 27);
+    background-color: #ffe262;
+    border-color: #ffe262;
 }
