@@ -42,13 +42,20 @@ $("#add-train").on("click", function (event) {
     $("#frequency-input").val("");
 });
 
+
 // EVENT HANDLER
 database.ref().on("child_added", function (childSnapshot) {
-    console.log(childSnapshot.val());
-    
-    // Store as vars
-    // var trainName = childSnapshot.val().newTrainName;
-    // var destination = childSnapshot.val().city;
-    // var firstTrainTime = childSnapshot.val().firstArrival;
-    // var frequency = childSnapshot.val().freq;
-})
+      // Store everything into a variable.
+  trainName = childSnapshot.val().newTrainName;
+  destination = childSnapshot.val().city;
+  firstTrainTime = childSnapshot.val().firstArrival;
+  frequency = childSnapshot.val().freq;
+
+    // Create a new row
+    newRow = $("<tr>").append(
+        $("<td>").text(newTrain),
+  );
+
+  // Append new row to table
+  $("#train-table > tbody").append(newTrain)
+});
