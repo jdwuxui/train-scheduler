@@ -56,11 +56,25 @@ database.ref().on("child_added", function (childSnapshot) {
         $("<td>").text(destinationText),
         $("<td>").text(frequencyText),
         $("<td>").text(firstTrainTimeText),
-        // add td for Minutes Away
     );
 
     // Append row to table
     $("#train-table > tbody").append(newTrainToAdd)
 });
 
-// 
+////////////////// ADD TO EVENT HANDLER ///////////////////// 
+// Get current time and date
+var currentTime = moment();
+console.log("CURRENT TIME: " + moment(currentTime).format("MMMM Do YYYY, hh:mm"));
+
+// Convert the first arrival time and push back 1 year 
+
+// Calculate time difference
+
+// Calculate time apart (remainder)
+
+// Calculate how many minutes away the next train is
+
+// Calculate arrivial time of next train
+
+// Append Minutes Away into table
