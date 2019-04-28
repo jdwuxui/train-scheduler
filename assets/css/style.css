@@ -35,3 +35,8 @@ th,
     border-color: #ffe262;
 }
 
+#train-table th,
+td {
+  display: inline-block;
+  width: 16.575%;
+}
