@@ -56,8 +56,11 @@ database.ref().on("child_added", function (childSnapshot) {
         $("<td>").text(destinationText),
         $("<td>").text(frequencyText),
         $("<td>").text(firstTrainTimeText),
+        // add td for Minutes Away
     );
 
     // Append row to table
     $("#train-table > tbody").append(newTrainToAdd)
 });
+
+// 
